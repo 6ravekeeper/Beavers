@@ -5,6 +5,7 @@ Bobrynska — це сучасний адаптивний вебзастосун�
 
 ## Технології
 React
+
 JavaScript
 ### TailwindCSS (або CSS Modules)
 ### React Router
