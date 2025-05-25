@@ -4,8 +4,8 @@ Bobrynska — це сучасний адаптивний вебзастосун�
 ---
 
 ## Технології
-### React
-### JavaScript
+React
+JavaScript
 ### TailwindCSS (або CSS Modules)
 ### React Router
 ### LocalStorage (для збереження кошика або форм)
