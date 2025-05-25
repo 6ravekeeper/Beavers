@@ -4,7 +4,7 @@
 ---
 
 ## Технології
-React
+* React
 
 JavaScript
 
