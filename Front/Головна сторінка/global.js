@@ -48,3 +48,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// переход на страницу про нас
+document.addEventListener("DOMContentLoaded", function () {
+  const aboutLink = document.getElementById("about-link");
+
+  if (aboutLink) {
+    aboutLink.addEventListener("click", function (e) {
+      e.preventDefault(); // отменяет переход по #
+      window.location.href = "../Сторінка про нас/about.html"; // переход на нужную страницу
+    });
+  }
+});
