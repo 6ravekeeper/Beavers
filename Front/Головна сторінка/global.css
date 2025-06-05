@@ -573,11 +573,12 @@
   margin-bottom: 10px;
 }
 .checkbox-group input[type="checkbox"] {
-  width: 25px; /* Approx from SVG 2006:97 (35x33) */
+  appearance: none;
+  width: 25px; 
   height: 25px;
   margin-right: 10px;
-  border: 2px solid #81BECE; /* style_35 */
-  border-radius: 5px; /* style_35 */
+  border: 2px solid #81BECE; 
+  border-radius: 5px; 
   appearance: none;
   -webkit-appearance: none;
   position: relative;
