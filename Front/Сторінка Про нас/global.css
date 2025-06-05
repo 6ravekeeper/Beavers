@@ -1,0 +1,51 @@
+<style>
+  body {
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #ffffff;
+    color: #012e4a; /* Default text color, can be overridden */
+    overflow-x: hidden; /* Prevent horizontal scroll from slightly oversized elements */
+  }
+
+  .page-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative; /* Context for absolutely positioned children if any */
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1280px; /* A common content width, adjust as needed based on design internal margins */
+    margin: 0 auto;
+    padding: 0 20px; /* Basic horizontal padding */
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  h1, h2, h3, p {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Helper class for elements that are visually hidden but accessible */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+</style>
