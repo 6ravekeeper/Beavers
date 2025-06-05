@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Titillium+Web:wght@600&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 .topbar-section {
   padding: 15px 0; 
   background-color: #fff; 
@@ -16,14 +20,14 @@
 }
 .topbar-nav-left ul {
   display: flex;
-  gap: 40px; /* Approximate gap */
+  gap: 40px; 
 }
 .topbar-nav-left li a, .topbar-account {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 600;
-  font-size: 25px; /* style_39 */
-  color: #012E4A; /* style_39 */
-  line-height: 38.025px; /* style_39 */
+  font-size: 25px; 
+  color: #012E4A; 
+  line-height: 38.025px; 
 }
 .topbar-nav-right {
   display: flex;
@@ -36,19 +40,18 @@
   gap: 10px;
 }
 .topbar-icon-user {
-  width: 42px; /* 2006:132 width */
-  height: 45px; /* 2006:132 height */
+  width: 42px;
+  height: 45px;
 }
 .topbar-icon-cart {
-  width: 41px; /* 2006:139 width */
-  height: 37px; /* 2006:139 height */
+  width: 41px;
+  height: 37px;
 }
 .topbar-icon-phone {
-  width: 36px; /* 2006:142 width */
-  height: 36px; /* 2006:142 height */
+  width: 36px;
+  height: 36px;
 }
 
-/* Responsive adjustments for topbar */
 @media (max-width: 1024px) {
   .topbar-container {
     padding: 0 40px;
@@ -532,8 +535,8 @@
   text-align: center;
   margin-bottom: 40px;
 }
-.order-form {
-  /* Form elements are SVGs in Figma, will style standard inputs */
+#order-form {
+  scroll-margin-top: 220px;
 }
 .form-grid {
   display: grid;

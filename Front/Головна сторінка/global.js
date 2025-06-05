@@ -82,3 +82,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// прокрутка до заказа
+document.querySelector('.hero-cta-button').addEventListener('click', (e) => {
+  e.preventDefault();
+  document.getElementById('order-form').scrollIntoView({
+    behavior: 'smooth'
+  });
+});
