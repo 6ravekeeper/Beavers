@@ -1,53 +1,713 @@
-body {
-  font-family: 'Titillium Web', 'Archivo', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-  color: #3E5168; /* Default text color */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Titillium+Web:wght@600&display=swap');
+
+.topbar-section {
+  padding: 15px 0; 
+  background-color: #fff; 
+  border-bottom: 1px solid #eee; 
+}
+.topbar-container {
+  max-width: 1440px; 
+  margin: 0 auto;
+  padding: 0 85px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; 
+}
+.topbar-nav-left ul {
+  display: flex;
+  gap: 40px; /* Approximate gap */
+}
+.topbar-nav-left li a, .topbar-account {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  font-size: 25px; /* style_39 */
+  color: #012E4A; /* style_39 */
+  line-height: 38.025px; /* style_39 */
+}
+.topbar-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Approximate gap */
+}
+.topbar-account {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.topbar-icon-user {
+  width: 42px; /* 2006:132 width */
+  height: 45px; /* 2006:132 height */
+}
+.topbar-icon-cart {
+  width: 41px; /* 2006:139 width */
+  height: 37px; /* 2006:139 height */
+}
+.topbar-icon-phone {
+  width: 36px; /* 2006:142 width */
+  height: 36px; /* 2006:142 height */
 }
 
-.page-container {
+/* Responsive adjustments for topbar */
+@media (max-width: 1024px) {
+  .topbar-container {
+    padding: 0 40px;
+  }
+  .topbar-nav-left ul {
+    gap: 20px;
+  }
+  .topbar-nav-right {
+    gap: 15px;
+  }
+  .topbar-nav-left li a, .topbar-account {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .topbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 0 20px;
+  }
+  .topbar-nav-left ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .topbar-nav-right {
+    align-self: flex-start;
+  }
+   .topbar-nav-left li a, .topbar-account {
+    font-size: 18px;
+  }
+}
+
+/* CSS for section section:header */
+.header-section {
+  background: linear-gradient(90deg, #b6e6f9 69.71%, #b4e3d4 100%); /* style_3 */
+  /* Height approx 225px, y from -400 to -175 */
+  padding: 20px 0; /* Adjusted padding */
+}
+.header-container {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 85px; /* Consistent with topbar or based on elements */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.header-logo-img {
+  width: 191px; /* 2001:32 width */
+  height: 165px; /* 2001:32 height */
+  margin-bottom: 5px; /* Space between image and text */
+}
+.header-logo-text {
+  font-family: 'Archivo', sans-serif; /* style_7 */
+  font-weight: 600; /* style_7 */
+  font-size: 25px; /* style_7 */
+  color: #3D565C; /* From textStyle_9 color */
+  line-height: 27.2px; /* style_7 */
+}
+.header-nav ul {
+  display: flex;
+  gap: 60px; /* Approximate gap */
+}
+.header-nav li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif; /* style_10 */
+  font-weight: 600; /* style_10 */
+  font-size: 20px; /* style_10 */
+  color: #012E4A; /* style_10 */
+  line-height: 30.42px; /* style_10 */
+}
+.header-nav-icon {
+  /* Sizes from SVGs: 2003:41 (31.5x77), 2003:44 (47x77.5), 2003:50 (53x54) */
+  /* Using a consistent height for alignment */
+  height: 60px; /* Average/harmonized height */
+  margin-bottom: 10px; /* Space between icon and text */
+}
+/* Responsive adjustments for header */
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 0 40px;
+  }
+  .header-nav ul {
+    gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+  }
+  .header-nav ul {
+    flex-direction: row; /* Keep horizontal for few items */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .header-nav li a {
+    font-size: 16px;
+  }
+  .header-nav-icon {
+    height: 40px;
+  }
+  .header-logo-img {
+    width: 120px;
+    height: auto;
+  }
+  .header-logo-text {
+    font-size: 20px;
+  }
+}
+
+/* CSS for section section:hero */
+.hero-section {
   position: relative;
-  overflow: hidden; /* As per style_1 on root node */
+  /* Height approx 688px (y: -131 to y: 557 for bg svg, or content up to y:352) */
+  /* Let content define height, or set min-height */
+  min-height: 650px; /* Approximate height */
+  display: flex;
+  align-items: center; /* Vertically center content if possible */
+  overflow: hidden; /* To contain absolute elements */
+}
+.hero-background-svg-wrapper {
+  position: absolute;
+  top: 0; /* y: -131 relative to frame top (-509) = 378px. But this is a background, so let's make it cover. */
+  left: 0; /* x: -640 relative to frame left (-640) = 0px */
+  width: 100%; /* 1467px, slightly wider than 1440px */
+  height: 100%; /* 644px */
+  z-index: 1;
+}
+.hero-background-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px; /* General padding */
+  position: relative;
+  z-index: 2;
+  display: flex; /* For layouting jug and text content */
+  align-items: center;
+  width: 100%;
+  justify-content: space-around; /* Jug on left, text on right */
+}
+.hero-images {
+  position: absolute; /* Container for all decorative images */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* Above background SVG, below text content */
+}
+.hero-img-jug { /* 2003:54 */
+  position: absolute;
+  width: 500px; height: 500px;
+  left: calc( ((-662px - (-640px))) ); /* x: -662 relative to frame x: -640 */
+  top: calc( ((-57px - (-509px))) - ((-131px - (-509px))) ); /* y: -57 relative to hero-section start y: -131 (approx) */
+  /* Simplified: left: -22px; top: 74px; relative to hero-section which starts near y=-131 */
+  /* Let's use % for better scaling or adjust in media queries */
+  left: 5%; 
+  top: 10%;
+  width: 35%; /* Responsive width */
+  max-width: 500px;
+  z-index: 4;
+}
+.hero-img-leaves-left { /* 2003:58 */
+  position: absolute;
+  width: 416px; height: 291px;
+  left: calc( ((-644px - (-640px))) );
+  top: calc( ((144px - (-509px))) - ((-131px - (-509px))) );
+  /* left: -4px; top: 275px; */
+  left: 2%;
+  top: 40%;
+  width: 28%;
+  max-width: 416px;
+  transform: rotate(-0.52deg); /* style_12 */
+  z-index: 3;
+}
+.hero-img-beaver { /* 2003:55 */
+  position: absolute;
+  width: 300px; height: 300px;
+  left: calc( ((-237px - (-640px))) );
+  top: calc( ((185px - (-509px))) - ((-131px - (-509px))) );
+  /* left: 403px; top: 316px; */
+  left: 28%;
+  top: 50%;
+  width: 20%;
+  max-width: 300px;
+  z-index: 5;
+}
+.hero-img-leaves-right { /* 2003:63 */
+  position: absolute;
+  width: 224px; height: 268px;
+  right: 0; /* x: 629 in a 1440 wide frame (origin -640) means 629 - (1440/2 - 640) = 629 - 80 = 549 from center. Or 1440 - (629+640) from right. */
+  /* x: 629. Frame width 1440. Frame x_start -640. Right edge of frame is -640+1440 = 800. */
+  /* Element right edge is 629+224 = 853. So it's off screen. This must be relative to something else or a mistake. */
+  /* Let's position it visually from the right edge. */
+  right: 5%;
+  top: -50px; /* y: -400 is very high. Relative to hero top. */
+  width: 15%;
+  max-width: 224px;
+  z-index: 3;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, li {
-  margin: 0;
-  padding: 0;
+.hero-content {
+  position: relative;
+  z-index: 6; /* Above all images */
+  text-align: center; /* Default, can be overridden if layout is more complex */
+  margin-left: auto; /* Push to the right if jug is on left */
+  margin-right: 10%; /* Space from right edge */
+  padding-top: 50px; /* Approximate based on visual */
+}
+.hero-title-main { /* 2003:59 */
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  font-size: 100px; /* style_16 */
+  color: #ffffff; /* style_16 */
+  line-height: 152.1px; /* style_16 */
+  margin-bottom: 20px;
+}
+.hero-subtitle { /* 2003:60 */
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  font-size: 40px; /* style_17 */
+  color: #012E4A; /* style_17 */
+  line-height: 60.84px; /* style_17 */
+  max-width: 500px; /* From node width */
+  margin: 0 auto 30px auto; /* Centering if needed */
+}
+.hero-cta-button { /* Text: 2003:67, BG: 2003:62 */
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  font-size: 40px; /* style_19 */
+  color: #3E5168; /* style_19 */
+  line-height: 60.84px; /* style_19 */
+  background-color: rgba(255, 255, 255, 0.9); /* style_18 */
+  border: 2px solid #81BECE; /* style_18 */
+  border-radius: 10px; /* style_18 */
+  padding: 10px 60px; /* Approximate padding to match size */
+  /* width: 311px; height: 66px; for BG */
 }
 
-ul {
-  list-style: none;
+.hero-floating-logo { /* Group of 2003:68, 2003:71, 2003:72 */
+  position: absolute;
+  left: calc( (-526px - (-640px)) ); /* x: -526 relative to frame x: -640 = 114px */
+  top: calc( ((249px - (-509px))) - ((-131px - (-509px))) ); /* y: 249 relative to hero-section start y: -131 = 380px */
+  /* left: 114px; top: 380px; */
+  left: 8%;
+  top: 60%;
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-floating-logo-images {
+  position: relative;
+  width: 230px; /* 2003:68 width */
+  height: 91px; /* 2003:68 height */
+}
+.hero-floating-logo-bg, .hero-floating-logo-icon {
+  position: absolute;
+}
+.hero-floating-logo-bg { /* 2003:68 */
+  top: 0; left: 0; width: 100%; height: 100%;
+}
+.hero-floating-logo-icon { /* 2003:71 */
+  width: 104px; height: 75px;
+  top: calc( (260px - 249px) ); /* 11px */
+  left: calc( (-457px - (-526px)) ); /* 69px */
+}
+.hero-floating-logo-text { /* 2003:72 */
+  font-family: 'Archivo', sans-serif;
+  font-weight: 600;
+  font-size: 12px; /* style_22 */
+  color: #3D565C; /* From textStyle_24 */
+  line-height: 13.056px; /* style_22 */
+  margin-top: 5px; /* Space from image */
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+@media (max-width: 1024px) {
+  .hero-section { min-height: 550px; }
+  .hero-content { margin-right: 5%; }
+  .hero-title-main { font-size: 80px; line-height: 1.2; }
+  .hero-subtitle { font-size: 30px; line-height: 1.3; }
+  .hero-cta-button { font-size: 30px; padding: 8px 40px; }
+  .hero-img-jug { width: 30%; top: 15%; }
+  .hero-img-beaver { width: 18%; top: 55%; left: 25%; }
+  .hero-floating-logo { top: 65%; left: 5%; }
 }
 
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  padding: 0;
-  font-family: inherit;
+@media (max-width: 768px) {
+  .hero-section { min-height: auto; padding-bottom: 150px; /* Space for floating logo */ }
+  .hero-container { flex-direction: column; text-align: center; }
+  .hero-images { /* Images might need to be simplified or hidden on mobile */
+    opacity: 0.3; /* Example: make them less prominent */
+  }
+  .hero-img-jug { position: relative; width: 60%; max-width: 250px; left: auto; top: auto; margin: 20px auto; order: -1; }
+  .hero-img-beaver, .hero-img-leaves-left, .hero-img-leaves-right { display: none; /* Hide complex decorations */ }
+
+  .hero-content {
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 20px;
+    width: 100%;
+    order: 0;
+  }
+  .hero-title-main { font-size: 50px; }
+  .hero-subtitle { font-size: 24px; }
+  .hero-cta-button { font-size: 24px; }
+  .hero-floating-logo {
+    /* position: relative; */
+    /* top: auto; left: auto; */
+    /* margin-top: 30px; */
+    /* transform: translateX(-50%); left: 50%; */
+    bottom: 20px; /* Stick to bottom of section */
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto; /* Override previous top */
+  }
 }
 
-img {
+/* CSS for section section:about */
+.about-section {
+  position: relative;
+  padding: 80px 0; /* Approximate padding */
+  color: #ffffff; /* Text color on dark background */
+  overflow: hidden;
+}
+.about-background-svg-wrapper {
+  position: absolute;
+  top: 0; /* y: 542. Section starts around here. */
+  left: 0; /* x: -643. */
+  width: 100%; /* 1445px */
+  height: 100%; /* 824px */
+  z-index: -1; /* Behind content */
+}
+.about-background-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-container {
+  max-width: 1200px; /* Slightly less than full for content */
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+.about-title { /* 2003:78 */
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  font-size: 50px; /* style_26 */
+  line-height: 76.05px; /* style_26 */
+  text-align: center;
+  margin-bottom: 60px;
+  color: #ffffff; /* style_26 */
+}
+.about-content-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start; /* Align items to the start of the flex container */
+}
+.about-left-column {
+  flex: 1;
+  text-align: center; /* For tagline */
+}
+.about-tagline { /* 2003:76 */
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  font-size: 40px; /* style_25 */
+  line-height: 60.84px; /* style_25 */
+  margin-bottom: 40px;
+  color: #ffffff; /* style_25 */
+}
+.about-water-glass-img { /* 2003:81 */
+  width: 371px; /* Original width */
   max-width: 100%;
   height: auto;
-  display: block;
+  margin: 0 auto; /* Center image if column is wider */
+}
+.about-right-column {
+  flex: 2;
+}
+.about-description { /* Based on 2003:83 and its text styles */
+  font-family: 'Archivo', sans-serif;
+  font-weight: 600;
+  text-align: left; /* Default, but Figma has center for parts */
+  color: #ffffff; /* style_29 */
+}
+.about-description p, .about-description h3, .about-description ul {
+  margin-bottom: 20px; /* Spacing between paragraphs/elements */
+  line-height: 1.5; /* General readability */
+}
+.about-description .desc-p1, .about-description .desc-p2 {
+  font-size: 22px; /* Approximating from 35px in Figma for better web readability, style_textStyle_31 */
+  line-height: 1.6; /* From 43.52px line height */
+}
+.about-description .desc-composition-title {
+  font-size: 28px; /* Approximating from 40px, style_textStyle_base_30 */
+  font-weight: 600; /* Explicitly */
+  margin-top: 30px;
+  text-align: center;
+}
+.about-description .desc-composition-list {
+  list-style: none; /* Bullets are part of text in Figma */
+  padding-left: 0;
+  font-size: 24px; /* Approximating from 40px */
+  text-align: center;
+}
+.about-description .desc-composition-list li {
+  margin-bottom: 10px;
+}
+.about-description .desc-conclusion {
+  font-size: 26px; /* Approximating from 40px */
+  font-weight: 600;
+  text-align: center;
+  margin-top: 30px;
 }
 
-/* Basic Responsive Adjustments */
+@media (max-width: 992px) {
+  .about-title { font-size: 40px; margin-bottom: 40px; }
+  .about-tagline { font-size: 30px; }
+  .about-description .desc-p1, .about-description .desc-p2 { font-size: 18px; }
+  .about-description .desc-composition-title { font-size: 24px; }
+  .about-description .desc-composition-list { font-size: 20px; }
+  .about-description .desc-conclusion { font-size: 22px; }
+}
+
 @media (max-width: 768px) {
-  body {
-    font-size: 14px; /* Adjust base font size for smaller screens */
+  .about-section { padding: 40px 0; }
+  .about-content-layout {
+    flex-direction: column;
+    align-items: center; /* Center columns when stacked */
+    text-align: center;
   }
-  .page-container {
-    padding-left: 10px;
-    padding-right: 10px;
+  .about-left-column, .about-right-column {
+    flex: none;
+    width: 100%;
+    max-width: 500px; /* Limit width for readability */
   }
+  .about-title { font-size: 32px; margin-bottom: 30px; }
+  .about-tagline { font-size: 24px; margin-bottom: 20px; }
+  .about-water-glass-img { width: 250px; margin-bottom: 30px; }
+  .about-description p, .about-description h3, .about-description ul { text-align: left; } /* Revert to left for paragraphs */
+  .about-description .desc-composition-title,
+  .about-description .desc-composition-list,
+  .about-description .desc-conclusion { text-align: center; }
+}
+
+/* CSS for section section:order */
+.order-section {
+  padding: 60px 0;
+  background-color: #f8f9fa; /* Light background for contrast */
+}
+.order-container {
+  max-width: 850px; /* Based on form container width 787px + padding */
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #ffffff; /* style_33 */
+  border: 2px solid #81BECE; /* style_33 */
+  border-radius: 10px; /* style_33 */
+}
+.order-title { /* 2003:84 */
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  font-size: 40px; /* style_32 */
+  color: #012E4A; /* style_32 */
+  line-height: 60.84px; /* style_32 */
+  text-align: center;
+  margin-bottom: 40px;
+}
+.order-form {
+  /* Form elements are SVGs in Figma, will style standard inputs */
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.form-column-left, .form-column-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-group label, .form-group legend {
+  font-family: 'Titillium Web', sans-serif; /* style_38 */
+  font-weight: 600;
+  font-size: 25px; /* style_38 */
+  color: #3E5168; /* style_38 */
+  line-height: 38.025px; /* style_38 */
+  margin-bottom: 8px;
+}
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="number"] {
+  padding: 10px;
+  border: 2px solid #81BECE; /* style_34, style_40, style_41 */
+  border-radius: 5px; /* style_34, style_40, style_41 */
+  font-size: 18px;
+  height: 45px; /* From SVG rects */
+  box-sizing: border-box;
+}
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.checkbox-group input[type="checkbox"] {
+  width: 25px; /* Approx from SVG 2006:97 (35x33) */
+  height: 25px;
+  margin-right: 10px;
+  border: 2px solid #81BECE; /* style_35 */
+  border-radius: 5px; /* style_35 */
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  cursor: pointer;
+}
+.checkbox-group input[type="checkbox"]:checked::before {
+  content: '✔';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #012E4A;
+  font-size: 18px;
+}
+.checkbox-group label {
+  font-family: 'Titillium Web', sans-serif; /* style_38 */
+  font-weight: 600;
+  font-size: 25px; /* style_38 */
+  color: #3E5168; /* style_38 */
+  margin-bottom: 0; /* Override */
+}
+.form-submit-button { /* Based on 2006:115 and 2006:99 */
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  font-size: 25px; /* style_39 for text, but button text is usually larger */
+  color: #012E4A; /* style_39 */
+  line-height: 1; /* Adjust for button */
+  padding: 12px 20px;
+  background-color: #fff; /* Assuming, or use a color */
+  border: 2px solid #81BECE; /* style_37 */
+  border-radius: 5px; /* style_37 */
+  text-align: center;
+  width: auto; /* Fit content or fixed width */
+  align-self: flex-start; /* Align to start of column */
+  margin-top: 10px; /* Space above button */
+}
+@media (max-width: 768px) {
+  .order-container { padding: 20px; }
+  .order-title { font-size: 30px; margin-bottom: 20px; }
+  .form-grid {
+    grid-template-columns: 1fr; /* Stack columns */
+    gap: 20px;
+  }
+  .form-group label, .form-group legend, .checkbox-group label { font-size: 20px; }
+  .form-submit-button { width: 100%; font-size: 20px; }
+}
+
+/* CSS for section section:delivery */
+.delivery-section {
+  padding: 60px 20px; /* General padding */
+}
+.delivery-container {
+  max-width: 900px; /* Readable width for text */
+  margin: 0 auto;
+}
+.delivery-title { /* 2006:118 */
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  font-size: 25px; /* style_39, seems small for a title, let's make it larger */
+  font-size: 36px;
+  color: #012E4A; /* style_39 */
+  line-height: 1.3; /* Adjusted from 38.025px */
+  margin-bottom: 30px;
+  text-align: left; /* As per Figma */
+}
+.delivery-content { /* Based on 2006:119 */
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  font-size: 20px; /* style_42 */
+  color: #3E5168; /* style_42 */
+  line-height: 30.42px; /* style_42 */
+}
+.delivery-content p {
+  margin-bottom: 20px;
+}
+.delivery-content ul {
+  list-style: disc; /* Standard bullets */
+  padding-left: 25px;
+  margin-bottom: 20px;
+}
+.delivery-content ul li {
+  margin-bottom: 10px;
+}
+.delivery-brand-mention { /* textStyle_44 */
+  color: #012E4A; /* Specific color for this part */
+  font-weight: 600; /* Already set by .delivery-content */
+  margin-top: 30px;
+}
+@media (max-width: 768px) {
+  .delivery-section { padding: 40px 20px; }
+  .delivery-title { font-size: 28px; margin-bottom: 20px; }
+  .delivery-content { font-size: 16px; line-height: 1.6; }
+}
+
+/* CSS for section section:footer */
+.footer-section {
+  padding: 40px 20px;
+  background-color: #f1f1f1; /* Light grey for footer */
+  text-align: center;
+}
+.footer-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.footer-logo { /* Based on 2006:121, 2006:122 */
+  display: flex;
+  flex-direction: column; /* Stack image and text */
+  align-items: center;
+  margin-bottom: 15px;
+}
+.footer-logo-img {
+  width: 88px; /* 2006:121 width */
+  height: 69px; /* 2006:121 height */
+  margin-bottom: 5px;
+}
+.footer-logo-text {
+  font-family: 'Archivo', sans-serif; /* style_45 */
+  font-weight: 600; /* style_45 */
+  font-size: 13px; /* style_45 */
+  color: #3D565C; /* From textStyle_47 */
+  line-height: 14.144px; /* style_45 */
+}
+.footer-copyright {
+  font-size: 14px;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .footer-section { padding: 20px; }
+  .footer-logo-img { width: 60px; height: auto; }
+  .footer-logo-text { font-size: 12px; }
+  .footer-copyright { font-size: 12px; }
 }
