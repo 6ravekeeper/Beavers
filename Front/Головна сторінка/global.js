@@ -90,3 +90,32 @@ document.querySelector('.hero-cta-button').addEventListener('click', (e) => {
     behavior: 'smooth'
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // проверяем хэш в урле
+    if (window.location.hash === '#section-order') {
+      scrollToOrderSection();
+    }
+    
+    // проверяем метку в localStorage
+    if (localStorage.getItem('scrollToOrder')) {
+      scrollToOrderSection();
+      localStorage.removeItem('scrollToOrder');
+    }
+
+    function scrollToOrderSection() {
+      setTimeout(() => {
+        const section = document.getElementById('section-order');
+        if (section) {
+          const header = document.querySelector('header');
+          const headerHeight = header ? header.offsetHeight : 120;
+          const offsetPosition = section.offsetTop - headerHeight;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    }
+  });

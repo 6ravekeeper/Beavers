@@ -3,36 +3,35 @@
 html {
   scroll-behavior: smooth;
 }
-
 .topbar-section {
-  padding: 15px 0; 
-  background-color: #fff; 
-  border-bottom: 1px solid #eee; 
+  padding: 15px 0;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
 }
 .topbar-container {
-  max-width: 1440px; 
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 85px; 
+  padding: 0 85px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative; 
+  position: relative;
 }
 .topbar-nav-left ul {
   display: flex;
-  gap: 40px; 
+  gap: 40px;
 }
 .topbar-nav-left li a, .topbar-account {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 600;
-  font-size: 25px; 
-  color: #012E4A; 
-  line-height: 38.025px; 
+  font-size: 25px;
+  color: #012E4A;
+  line-height: 38.025px;
 }
 .topbar-nav-right {
   display: flex;
   align-items: center;
-  gap: 30px; /* Approximate gap */
+  gap: 30px;
 }
 .topbar-account {
   display: flex;
@@ -51,7 +50,6 @@ html {
   width: 36px;
   height: 36px;
 }
-
 @media (max-width: 1024px) {
   .topbar-container {
     padding: 0 40px;
@@ -80,21 +78,18 @@ html {
   .topbar-nav-right {
     align-self: flex-start;
   }
-   .topbar-nav-left li a, .topbar-account {
+  .topbar-nav-left li a, .topbar-account {
     font-size: 18px;
   }
 }
-
-/* CSS for section section:header */
 .header-section {
-  background: linear-gradient(90deg, #b6e6f9 69.71%, #b4e3d4 100%); /* style_3 */
-  /* Height approx 225px, y from -400 to -175 */
-  padding: 20px 0; /* Adjusted padding */
+  background: linear-gradient(90deg, #b6e6f9 69.71%, #b4e3d4 100%);
+  padding: 20px 0;
 }
 .header-container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 85px; /* Consistent with topbar or based on elements */
+  padding: 0 85px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,39 +101,36 @@ html {
   text-align: center;
 }
 .header-logo-img {
-  width: 191px; /* 2001:32 width */
-  height: 165px; /* 2001:32 height */
-  margin-bottom: 5px; /* Space between image and text */
+  width: 191px;
+  height: 165px;
+  margin-bottom: 5px;
 }
 .header-logo-text {
-  font-family: 'Archivo', sans-serif; /* style_7 */
-  font-weight: 600; /* style_7 */
-  font-size: 25px; /* style_7 */
-  color: #3D565C; /* From textStyle_9 color */
-  line-height: 27.2px; /* style_7 */
+  font-family: 'Archivo', sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  color: #3D565C;
+  line-height: 27.2px;
 }
 .header-nav ul {
   display: flex;
-  gap: 60px; /* Approximate gap */
+  gap: 60px;
 }
 .header-nav li a {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-family: 'Titillium Web', sans-serif; /* style_10 */
-  font-weight: 600; /* style_10 */
-  font-size: 20px; /* style_10 */
-  color: #012E4A; /* style_10 */
-  line-height: 30.42px; /* style_10 */
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #012E4A;
+  line-height: 30.42px;
 }
 .header-nav-icon {
-  /* Sizes from SVGs: 2003:41 (31.5x77), 2003:44 (47x77.5), 2003:50 (53x54) */
-  /* Using a consistent height for alignment */
-  height: 60px; /* Average/harmonized height */
-  margin-bottom: 10px; /* Space between icon and text */
+  height: 60px;
+  margin-bottom: 10px;
 }
-/* Responsive adjustments for header */
 @media (max-width: 1024px) {
   .header-container {
     padding: 0 40px;
@@ -154,7 +146,7 @@ html {
     padding: 0 20px;
   }
   .header-nav ul {
-    flex-direction: row; /* Keep horizontal for few items */
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
@@ -173,23 +165,19 @@ html {
     font-size: 20px;
   }
 }
-
-/* CSS for section section:hero */
 .hero-section {
   position: relative;
-  /* Height approx 688px (y: -131 to y: 557 for bg svg, or content up to y:352) */
-  /* Let content define height, or set min-height */
-  min-height: 650px; /* Approximate height */
+  min-height: 650px;
   display: flex;
-  align-items: center; /* Vertically center content if possible */
-  overflow: hidden; /* To contain absolute elements */
+  align-items: center;
+  overflow: hidden;
 }
 .hero-background-svg-wrapper {
   position: absolute;
-  top: 0; /* y: -131 relative to frame top (-509) = 378px. But this is a background, so let's make it cover. */
-  left: 0; /* x: -640 relative to frame left (-640) = 0px */
-  width: 100%; /* 1467px, slightly wider than 1440px */
-  height: 100%; /* 644px */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1;
 }
 .hero-background-svg {
@@ -200,117 +188,101 @@ html {
 .hero-container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px; /* General padding */
+  padding: 0 20px;
   position: relative;
   z-index: 2;
-  display: flex; /* For layouting jug and text content */
+  display: flex;
   align-items: center;
   width: 100%;
-  justify-content: space-around; /* Jug on left, text on right */
+  justify-content: space-around;
 }
 .hero-images {
-  position: absolute; /* Container for all decorative images */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2; /* Above background SVG, below text content */
+  z-index: 2;
 }
-.hero-img-jug { /* 2003:54 */
+.hero-img-jug {
   position: absolute;
-  width: 500px; height: 500px;
-  left: calc( ((-662px - (-640px))) ); /* x: -662 relative to frame x: -640 */
-  top: calc( ((-57px - (-509px))) - ((-131px - (-509px))) ); /* y: -57 relative to hero-section start y: -131 (approx) */
-  /* Simplified: left: -22px; top: 74px; relative to hero-section which starts near y=-131 */
-  /* Let's use % for better scaling or adjust in media queries */
-  left: 5%; 
+  width: 500px;
+  height: 500px;
+  left: 5%;
   top: 10%;
-  width: 35%; /* Responsive width */
+  width: 35%;
   max-width: 500px;
   z-index: 4;
 }
-.hero-img-leaves-left { /* 2003:58 */
+.hero-img-leaves-left {
   position: absolute;
-  width: 416px; height: 291px;
-  left: calc( ((-644px - (-640px))) );
-  top: calc( ((144px - (-509px))) - ((-131px - (-509px))) );
-  /* left: -4px; top: 275px; */
+  width: 416px;
+  height: 291px;
   left: 2%;
   top: 40%;
   width: 28%;
   max-width: 416px;
-  transform: rotate(-0.52deg); /* style_12 */
+  transform: rotate(-0.52deg);
   z-index: 3;
 }
-.hero-img-beaver { /* 2003:55 */
+.hero-img-beaver {
   position: absolute;
-  width: 300px; height: 300px;
-  left: calc( ((-237px - (-640px))) );
-  top: calc( ((185px - (-509px))) - ((-131px - (-509px))) );
-  /* left: 403px; top: 316px; */
+  width: 300px;
+  height: 300px;
   left: 28%;
   top: 50%;
   width: 20%;
   max-width: 300px;
   z-index: 5;
 }
-.hero-img-leaves-right { /* 2003:63 */
+.hero-img-leaves-right {
   position: absolute;
-  width: 224px; height: 268px;
-  right: 0; /* x: 629 in a 1440 wide frame (origin -640) means 629 - (1440/2 - 640) = 629 - 80 = 549 from center. Or 1440 - (629+640) from right. */
-  /* x: 629. Frame width 1440. Frame x_start -640. Right edge of frame is -640+1440 = 800. */
-  /* Element right edge is 629+224 = 853. So it's off screen. This must be relative to something else or a mistake. */
-  /* Let's position it visually from the right edge. */
+  width: 224px;
+  height: 268px;
   right: 5%;
-  top: -50px; /* y: -400 is very high. Relative to hero top. */
+  top: -50px;
   width: 15%;
   max-width: 224px;
   z-index: 3;
 }
-
 .hero-content {
   position: relative;
-  z-index: 6; /* Above all images */
-  text-align: center; /* Default, can be overridden if layout is more complex */
-  margin-left: auto; /* Push to the right if jug is on left */
-  margin-right: 10%; /* Space from right edge */
-  padding-top: 50px; /* Approximate based on visual */
+  z-index: 6;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 10%;
+  padding-top: 50px;
 }
-.hero-title-main { /* 2003:59 */
+.hero-title-main {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 600;
-  font-size: 100px; /* style_16 */
-  color: #ffffff; /* style_16 */
-  line-height: 152.1px; /* style_16 */
+  font-size: 100px;
+  color: #ffffff;
+  line-height: 152.1px;
   margin-bottom: 20px;
 }
-.hero-subtitle { /* 2003:60 */
+.hero-subtitle {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 600;
-  font-size: 40px; /* style_17 */
-  color: #012E4A; /* style_17 */
-  line-height: 60.84px; /* style_17 */
-  max-width: 500px; /* From node width */
-  margin: 0 auto 30px auto; /* Centering if needed */
+  font-size: 40px;
+  color: #012E4A;
+  line-height: 60.84px;
+  max-width: 500px;
+  margin: 0 auto 30px auto;
 }
-.hero-cta-button { /* Text: 2003:67, BG: 2003:62 */
+.hero-cta-button {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 600;
-  font-size: 40px; /* style_19 */
-  color: #3E5168; /* style_19 */
-  line-height: 60.84px; /* style_19 */
-  background-color: rgba(255, 255, 255, 0.9); /* style_18 */
-  border: 2px solid #81BECE; /* style_18 */
-  border-radius: 10px; /* style_18 */
-  padding: 10px 60px; /* Approximate padding to match size */
-  /* width: 311px; height: 66px; for BG */
+  font-size: 40px;
+  color: #3E5168;
+  line-height: 60.84px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #81BECE;
+  border-radius: 10px;
+  padding: 10px 60px;
 }
-
-.hero-floating-logo { /* Group of 2003:68, 2003:71, 2003:72 */
+.hero-floating-logo {
   position: absolute;
-  left: calc( (-526px - (-640px)) ); /* x: -526 relative to frame x: -640 = 114px */
-  top: calc( ((249px - (-509px))) - ((-131px - (-509px))) ); /* y: 249 relative to hero-section start y: -131 = 380px */
-  /* left: 114px; top: 380px; */
   left: 8%;
   top: 60%;
   z-index: 7;
@@ -320,49 +292,90 @@ html {
 }
 .hero-floating-logo-images {
   position: relative;
-  width: 230px; /* 2003:68 width */
-  height: 91px; /* 2003:68 height */
+  width: 230px;
+  height: 91px;
 }
 .hero-floating-logo-bg, .hero-floating-logo-icon {
   position: absolute;
 }
-.hero-floating-logo-bg { /* 2003:68 */
-  top: 0; left: 0; width: 100%; height: 100%;
+.hero-floating-logo-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-.hero-floating-logo-icon { /* 2003:71 */
-  width: 104px; height: 75px;
-  top: calc( (260px - 249px) ); /* 11px */
-  left: calc( (-457px - (-526px)) ); /* 69px */
+.hero-floating-logo-icon {
+  width: 104px;
+  height: 75px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.hero-floating-logo-text { /* 2003:72 */
+.hero-floating-logo-text {
   font-family: 'Archivo', sans-serif;
   font-weight: 600;
-  font-size: 12px; /* style_22 */
-  color: #3D565C; /* From textStyle_24 */
-  line-height: 13.056px; /* style_22 */
-  margin-top: 5px; /* Space from image */
+  font-size: 12px;
+  color: #3D565C;
+  line-height: 13.056px;
+  margin-top: 5px;
 }
-
 @media (max-width: 1024px) {
-  .hero-section { min-height: 550px; }
-  .hero-content { margin-right: 5%; }
-  .hero-title-main { font-size: 80px; line-height: 1.2; }
-  .hero-subtitle { font-size: 30px; line-height: 1.3; }
-  .hero-cta-button { font-size: 30px; padding: 8px 40px; }
-  .hero-img-jug { width: 30%; top: 15%; }
-  .hero-img-beaver { width: 18%; top: 55%; left: 25%; }
-  .hero-floating-logo { top: 65%; left: 5%; }
-}
-
-@media (max-width: 768px) {
-  .hero-section { min-height: auto; padding-bottom: 150px; /* Space for floating logo */ }
-  .hero-container { flex-direction: column; text-align: center; }
-  .hero-images { /* Images might need to be simplified or hidden on mobile */
-    opacity: 0.3; /* Example: make them less prominent */
+  .hero-section {
+    min-height: 550px;
   }
-  .hero-img-jug { position: relative; width: 60%; max-width: 250px; left: auto; top: auto; margin: 20px auto; order: -1; }
-  .hero-img-beaver, .hero-img-leaves-left, .hero-img-leaves-right { display: none; /* Hide complex decorations */ }
-
+  .hero-content {
+    margin-right: 5%;
+  }
+  .hero-title-main {
+    font-size: 80px;
+    line-height: 1.2;
+  }
+  .hero-subtitle {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+  .hero-cta-button {
+    font-size: 30px;
+    padding: 8px 40px;
+  }
+  .hero-img-jug {
+    width: 30%;
+    top: 15%;
+  }
+  .hero-img-beaver {
+    width: 18%;
+    top: 55%;
+    left: 25%;
+  }
+  .hero-floating-logo {
+    top: 65%;
+    left: 5%;
+  }
+}
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+    padding-bottom: 150px;
+  }
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-images {
+    opacity: 0.3;
+  }
+  .hero-img-jug {
+    position: relative;
+    width: 60%;
+    max-width: 250px;
+    left: auto;
+    top: auto;
+    margin: 20px auto;
+    order: -1;
+  }
+  .hero-img-beaver, .hero-img-leaves-left, .hero-img-leaves-right {
+    display: none;
+  }
   .hero-content {
     margin-left: 0;
     margin-right: 0;
@@ -370,35 +383,35 @@ html {
     width: 100%;
     order: 0;
   }
-  .hero-title-main { font-size: 50px; }
-  .hero-subtitle { font-size: 24px; }
-  .hero-cta-button { font-size: 24px; }
+  .hero-title-main {
+    font-size: 50px;
+  }
+  .hero-subtitle {
+    font-size: 24px;
+  }
+  .hero-cta-button {
+    font-size: 24px;
+  }
   .hero-floating-logo {
-    /* position: relative; */
-    /* top: auto; left: auto; */
-    /* margin-top: 30px; */
-    /* transform: translateX(-50%); left: 50%; */
-    bottom: 20px; /* Stick to bottom of section */
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    top: auto; /* Override previous top */
+    top: auto;
   }
 }
-
-/* CSS for section section:about */
 .about-section {
   position: relative;
-  padding: 80px 0; /* Approximate padding */
-  color: #ffffff; /* Text color on dark background */
+  padding: 80px 0;
+  color: #ffffff;
   overflow: hidden;
 }
 .about-background-svg-wrapper {
   position: absolute;
-  top: 0; /* y: 542. Section starts around here. */
-  left: 0; /* x: -643. */
-  width: 100%; /* 1445px */
-  height: 100%; /* 824px */
-  z-index: -1; /* Behind content */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 .about-background-svg {
   width: 100%;
@@ -406,132 +419,156 @@ html {
   object-fit: cover;
 }
 .about-container {
-  max-width: 1200px; /* Slightly less than full for content */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
   z-index: 1;
 }
-.about-title { /* 2003:78 */
+.about-title {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 600;
-  font-size: 50px; /* style_26 */
-  line-height: 76.05px; /* style_26 */
+  font-size: 50px;
+  line-height: 76.05px;
   text-align: center;
   margin-bottom: 60px;
-  color: #ffffff; /* style_26 */
+  color: #ffffff;
 }
 .about-content-layout {
   display: flex;
   gap: 40px;
-  align-items: flex-start; /* Align items to the start of the flex container */
+  align-items: flex-start;
 }
 .about-left-column {
   flex: 1;
-  text-align: center; /* For tagline */
+  text-align: center;
 }
-.about-tagline { /* 2003:76 */
+.about-tagline {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 600;
-  font-size: 40px; /* style_25 */
-  line-height: 60.84px; /* style_25 */
+  font-size: 40px;
+  line-height: 60.84px;
   margin-bottom: 40px;
-  color: #ffffff; /* style_25 */
+  color: #ffffff;
 }
-.about-water-glass-img { /* 2003:81 */
-  width: 371px; /* Original width */
+.about-water-glass-img {
+  width: 371px;
   max-width: 100%;
   height: auto;
-  margin: 0 auto; /* Center image if column is wider */
+  margin: 0 auto;
 }
 .about-right-column {
   flex: 2;
 }
-.about-description { /* Based on 2003:83 and its text styles */
+.about-description {
   font-family: 'Archivo', sans-serif;
   font-weight: 600;
-  text-align: left; /* Default, but Figma has center for parts */
-  color: #ffffff; /* style_29 */
+  text-align: left;
+  color: #ffffff;
 }
 .about-description p, .about-description h3, .about-description ul {
-  margin-bottom: 20px; /* Spacing between paragraphs/elements */
-  line-height: 1.5; /* General readability */
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 .about-description .desc-p1, .about-description .desc-p2 {
-  font-size: 22px; /* Approximating from 35px in Figma for better web readability, style_textStyle_31 */
-  line-height: 1.6; /* From 43.52px line height */
+  font-size: 22px;
+  line-height: 1.6;
 }
 .about-description .desc-composition-title {
-  font-size: 28px; /* Approximating from 40px, style_textStyle_base_30 */
-  font-weight: 600; /* Explicitly */
+  font-size: 28px;
+  font-weight: 600;
   margin-top: 30px;
   text-align: center;
 }
 .about-description .desc-composition-list {
-  list-style: none; /* Bullets are part of text in Figma */
+  list-style: none;
   padding-left: 0;
-  font-size: 24px; /* Approximating from 40px */
+  font-size: 24px;
   text-align: center;
 }
 .about-description .desc-composition-list li {
   margin-bottom: 10px;
 }
 .about-description .desc-conclusion {
-  font-size: 26px; /* Approximating from 40px */
+  font-size: 26px;
   font-weight: 600;
   text-align: center;
   margin-top: 30px;
 }
-
 @media (max-width: 992px) {
-  .about-title { font-size: 40px; margin-bottom: 40px; }
-  .about-tagline { font-size: 30px; }
-  .about-description .desc-p1, .about-description .desc-p2 { font-size: 18px; }
-  .about-description .desc-composition-title { font-size: 24px; }
-  .about-description .desc-composition-list { font-size: 20px; }
-  .about-description .desc-conclusion { font-size: 22px; }
+  .about-title {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  .about-tagline {
+    font-size: 30px;
+  }
+  .about-description .desc-p1, .about-description .desc-p2 {
+    font-size: 18px;
+  }
+  .about-description .desc-composition-title {
+    font-size: 24px;
+  }
+  .about-description .desc-composition-list {
+    font-size: 20px;
+  }
+  .about-description .desc-conclusion {
+    font-size: 22px;
+  }
 }
-
 @media (max-width: 768px) {
-  .about-section { padding: 40px 0; }
+  .about-section {
+    padding: 40px 0;
+  }
   .about-content-layout {
     flex-direction: column;
-    align-items: center; /* Center columns when stacked */
+    align-items: center;
     text-align: center;
   }
   .about-left-column, .about-right-column {
     flex: none;
     width: 100%;
-    max-width: 500px; /* Limit width for readability */
+    max-width: 500px;
   }
-  .about-title { font-size: 32px; margin-bottom: 30px; }
-  .about-tagline { font-size: 24px; margin-bottom: 20px; }
-  .about-water-glass-img { width: 250px; margin-bottom: 30px; }
-  .about-description p, .about-description h3, .about-description ul { text-align: left; } /* Revert to left for paragraphs */
+  .about-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  .about-tagline {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .about-water-glass-img {
+    width: 250px;
+    margin-bottom: 30px;
+  }
+  .about-description p, .about-description h3, .about-description ul {
+    text-align: left;
+  }
   .about-description .desc-composition-title,
   .about-description .desc-composition-list,
-  .about-description .desc-conclusion { text-align: center; }
+  .about-description .desc-conclusion {
+    text-align: center;
+  }
 }
-
-/* CSS for section section:order */
 .order-section {
   padding: 60px 0;
-  background-color: #f8f9fa; /* Light background for contrast */
+  background-color: #f8f9fa;
 }
 .order-container {
-  max-width: 850px; /* Based on form container width 787px + padding */
+  max-width: 850px;
   margin: 0 auto;
   padding: 40px;
-  background-color: #ffffff; /* style_33 */
-  border: 2px solid #81BECE; /* style_33 */
-  border-radius: 10px; /* style_33 */
+  background-color: #ffffff;
+  border: 2px solid #81BECE;
+  border-radius: 10px;
 }
-.order-title { /* 2003:84 */
+.order-title {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 600;
-  font-size: 40px; /* style_32 */
-  color: #012E4A; /* style_32 */
-  line-height: 60.84px; /* style_32 */
+  font-size: 40px;
+  color: #012E4A;
+  line-height: 60.84px;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -553,21 +590,21 @@ html {
   flex-direction: column;
 }
 .form-group label, .form-group legend {
-  font-family: 'Titillium Web', sans-serif; /* style_38 */
+  font-family: 'Titillium Web', sans-serif;
   font-weight: 600;
-  font-size: 25px; /* style_38 */
-  color: #3E5168; /* style_38 */
-  line-height: 38.025px; /* style_38 */
+  font-size: 25px;
+  color: #3E5168;
+  line-height: 38.025px;
   margin-bottom: 8px;
 }
 .form-group input[type="text"],
 .form-group input[type="tel"],
 .form-group input[type="number"] {
   padding: 10px;
-  border: 2px solid #81BECE; /* style_34, style_40, style_41 */
-  border-radius: 5px; /* style_34, style_40, style_41 */
+  border: 2px solid #81BECE;
+  border-radius: 5px;
   font-size: 18px;
-  height: 45px; /* From SVG rects */
+  height: 45px;
   box-sizing: border-box;
 }
 .checkbox-group {
@@ -577,11 +614,11 @@ html {
 }
 .checkbox-group input[type="checkbox"] {
   appearance: none;
-  width: 25px; 
+  width: 25px;
   height: 25px;
   margin-right: 10px;
-  border: 2px solid #81BECE; 
-  border-radius: 5px; 
+  border: 2px solid #81BECE;
+  border-radius: 5px;
   appearance: none;
   -webkit-appearance: none;
   position: relative;
@@ -597,121 +634,142 @@ html {
   font-size: 18px;
 }
 .checkbox-group label {
-  font-family: 'Titillium Web', sans-serif; /* style_38 */
-  font-weight: 600;
-  font-size: 25px; /* style_38 */
-  color: #3E5168; /* style_38 */
-  margin-bottom: 0; /* Override */
-}
-.form-submit-button { /* Based on 2006:115 and 2006:99 */
   font-family: 'Titillium Web', sans-serif;
   font-weight: 600;
-  font-size: 25px; /* style_39 for text, but button text is usually larger */
-  color: #012E4A; /* style_39 */
-  line-height: 1; /* Adjust for button */
+  font-size: 25px;
+  color: #3E5168;
+  margin-bottom: 0;
+}
+.form-submit-button {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  color: #012E4A;
+  line-height: 1;
   padding: 12px 20px;
-  background-color: #fff; /* Assuming, or use a color */
-  border: 2px solid #81BECE; /* style_37 */
-  border-radius: 5px; /* style_37 */
+  background-color: #fff;
+  border: 2px solid #81BECE;
+  border-radius: 5px;
   text-align: center;
-  width: auto; /* Fit content or fixed width */
-  align-self: flex-start; /* Align to start of column */
-  margin-top: 10px; /* Space above button */
+  width: auto;
+  align-self: flex-start;
+  margin-top: 10px;
 }
 @media (max-width: 768px) {
-  .order-container { padding: 20px; }
-  .order-title { font-size: 30px; margin-bottom: 20px; }
+  .order-container {
+    padding: 20px;
+  }
+  .order-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
   .form-grid {
-    grid-template-columns: 1fr; /* Stack columns */
+    grid-template-columns: 1fr;
     gap: 20px;
   }
-  .form-group label, .form-group legend, .checkbox-group label { font-size: 20px; }
-  .form-submit-button { width: 100%; font-size: 20px; }
+  .form-group label, .form-group legend, .checkbox-group label {
+    font-size: 20px;
+  }
+  .form-submit-button {
+    width: 100%;
+    font-size: 20px;
+  }
 }
-
-/* CSS for section section:delivery */
 .delivery-section {
-  padding: 60px 20px; /* General padding */
+  padding: 60px 20px;
 }
 .delivery-container {
-  max-width: 900px; /* Readable width for text */
+  max-width: 900px;
   margin: 0 auto;
 }
-.delivery-title { /* 2006:118 */
+.delivery-title {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 600;
-  font-size: 25px; /* style_39, seems small for a title, let's make it larger */
   font-size: 36px;
-  color: #012E4A; /* style_39 */
-  line-height: 1.3; /* Adjusted from 38.025px */
+  color: #012E4A;
+  line-height: 1.3;
   margin-bottom: 30px;
-  text-align: left; /* As per Figma */
+  text-align: left;
 }
-.delivery-content { /* Based on 2006:119 */
+.delivery-content {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 600;
-  font-size: 20px; /* style_42 */
-  color: #3E5168; /* style_42 */
-  line-height: 30.42px; /* style_42 */
+  font-size: 20px;
+  color: #3E5168;
+  line-height: 30.42px;
 }
 .delivery-content p {
   margin-bottom: 20px;
 }
 .delivery-content ul {
-  list-style: disc; /* Standard bullets */
+  list-style: disc;
   padding-left: 25px;
   margin-bottom: 20px;
 }
 .delivery-content ul li {
   margin-bottom: 10px;
 }
-.delivery-brand-mention { /* textStyle_44 */
-  color: #012E4A; /* Specific color for this part */
-  font-weight: 600; /* Already set by .delivery-content */
+.delivery-brand-mention {
+  color: #012E4A;
+  font-weight: 600;
   margin-top: 30px;
 }
 @media (max-width: 768px) {
-  .delivery-section { padding: 40px 20px; }
-  .delivery-title { font-size: 28px; margin-bottom: 20px; }
-  .delivery-content { font-size: 16px; line-height: 1.6; }
+  .delivery-section {
+    padding: 40px 20px;
+  }
+  .delivery-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .delivery-content {
+    font-size: 16px;
+    line-height: 1.6;
+  }
 }
-
-/* CSS for section section:footer */
 .footer-section {
   padding: 40px 20px;
-  background-color: #f1f1f1; /* Light grey for footer */
+  background-color: #f1f1f1;
   text-align: center;
 }
 .footer-container {
   max-width: 1440px;
   margin: 0 auto;
 }
-.footer-logo { /* Based on 2006:121, 2006:122 */
+.footer-logo {
   display: flex;
-  flex-direction: column; /* Stack image and text */
+  flex-direction: column;
   align-items: center;
   margin-bottom: 15px;
 }
 .footer-logo-img {
-  width: 88px; /* 2006:121 width */
-  height: 69px; /* 2006:121 height */
+  width: 88px;
+  height: 69px;
   margin-bottom: 5px;
 }
 .footer-logo-text {
-  font-family: 'Archivo', sans-serif; /* style_45 */
-  font-weight: 600; /* style_45 */
-  font-size: 13px; /* style_45 */
-  color: #3D565C; /* From textStyle_47 */
-  line-height: 14.144px; /* style_45 */
+  font-family: 'Archivo', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #3D565C;
+  line-height: 14.144px;
 }
 .footer-copyright {
   font-size: 14px;
   color: #555;
 }
-
 @media (max-width: 768px) {
-  .footer-section { padding: 20px; }
-  .footer-logo-img { width: 60px; height: auto; }
-  .footer-logo-text { font-size: 12px; }
-  .footer-copyright { font-size: 12px; }
+  .footer-section {
+    padding: 20px;
+  }
+  .footer-logo-img {
+    width: 60px;
+    height: auto;
+  }
+  .footer-logo-text {
+    font-size: 12px;
+  }
+  .footer-copyright {
+    font-size: 12px;
+  }
 }
