@@ -10,13 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const address = document.getElementById("address").value;
       const quantity = document.getElementById("quantity").value;
 
-      const waterTypes = [];
-      if (document.getElementById("bottled-water-checkbox").checked) {
-        waterTypes.push("bottled");
-      }
-      if (document.getElementById("jug-water-checkbox").checked) {
-        waterTypes.push("jug");
-      }
+      const selectedWaterType = document.querySelector('input[name="water_type"]:checked')?.value;
+      const waterTypes = selectedWaterType ? [selectedWaterType] : [];
 
       const orderData = {
         name: name,
@@ -25,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
         quantity: parseInt(quantity),
         water_types: waterTypes
       };
+
+      console.log("Отправляемые данные:", orderData);  // отладка
 
       try {
         const response = await fetch("http://localhost:5000/api/order", {
@@ -37,9 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (response.ok) {
           const result = await response.json();
-          alert("Замовлення прийнято!" + result.status);
+          alert("Замовлення прийнято! Статус: " + result.status);
         } else {
-          alert("Помилка при оформленні замовлення.");
+          const errorResult = await response.json();
+          alert("Помилка при оформленні замовлення: " + errorResult.message);
         }
       } catch (error) {
         alert("Не вдалося підключитися до сервера.");
@@ -48,6 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+
 
 // переход на страницу про нас
 document.addEventListener("DOMContentLoaded", function () {
