@@ -60,3 +60,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+
+// маска для номера
+document.addEventListener('DOMContentLoaded', function() {
+  const phoneInput = document.getElementById('phone');
+  
+  const phoneMask = IMask(phoneInput, {
+    mask: '+{38} (000) 000-00-00',
+    lazy: false, // Маска всегда видна
+    placeholderChar: '_', // Символ-заполнитель
+    definitions: {
+      '0': /[0-9]/ // Разрешаем только цифры
+    }
+  });
+
+  // Запрет ввода при заполнении
+  phoneInput.addEventListener('keydown', function(e) {
+    if (phoneMask.masked.isComplete && e.key !== 'Backspace') {
+      e.preventDefault();
+    }
+  });
+});
